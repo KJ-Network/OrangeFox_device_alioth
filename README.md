@@ -1,11 +1,11 @@
-# OrangeFox device tree for alioth (Xiaomi Mi 11X / Redmi K40 / POCO F3)
+# OrangeFox device tree for alioth (Redmi K40)
 This tree is for building OrangeFox Recovery for the _alioth_ devices
 
-The Xiaomi Mi 11X (codenamed _"aliothin"_), Redmi K40 / POCO F3 (codenamed _"alioth"_) is a mid range smartphone from Xiaomi.
+The Redmi K40 (codenamed _"alioth"_) is a mid range smartphone from Xiaomi.
 
 # Device specifications
 
-| Device       | Xiaomi Mi 11X / Redmi K40 / POCO F3                        |
+| Device       | Redmi K40                                                  |
 | -----------: | :----------------------------------------------------------|
 | SoC          | Qualcomm SM8250 Snapdragon 870 5G                          |
 | CPU          | 8x Qualcomm® Kryo™ 585 up to 2.84GHz                       |
@@ -29,7 +29,7 @@ The Xiaomi Mi 11X (codenamed _"aliothin"_), Redmi K40 / POCO F3 (codenamed _"ali
 - vA/B partition functions
 - Vibration
 
-The Mi 11X / Redmi K40 / POCO F3 devices use a Virtual A/B Partition Scheme!
+The Redmi K40 devices use a Virtual A/B Partition Scheme!
 
 ## Building
 
@@ -43,6 +43,7 @@ lunch twrp_alioth-eng && mka adbd bootimage
 ## Credits
 - [Original alioth tree by Nebrassy](https://github.com/TeamWin/android_device_xiaomi_alioth)
 - [Kernel](https://github.com/AOSPA/android_kernel_xiaomi_sm8250.git)
+- [Original OFRP alioth tree by DarthJabba9](https://gitlab.com/OrangeFox/device/alioth.git)
 
 ### Copyright
  ```

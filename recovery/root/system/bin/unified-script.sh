@@ -37,23 +37,6 @@ setdevicespecs() {
     resetprop "ro.product.vendor.device" "$1"
 }
 
-load_INDIA()
-{
-    resetprop "ro.product.model" "Mi 11X"
-    resetprop "ro.product.odm.model" "Mi 11X"
-    resetprop "ro.product.system.model" "Mi 11X"
-    resetprop "ro.product.vendor.model" "Mi 11X"
-    resetprop "ro.product.system_ext.model" "Mi 11X"
-    resetprop "ro.product.product.model" "Mi 11X"
-    resetprop "ro.product.brand" "Xiaomi"
-    resetprop "ro.product.odm.brand" "Xiaomi"
-    resetprop "ro.product.system.brand" "Xiaomi"
-    resetprop "ro.product.system_ext.brand" "Xiaomi"
-    resetprop "ro.product.product.brand" "Xiaomi"
-    resetprop "ro.product.vendor.brand" "Xiaomi"
-    setdevicespecs "aliothin"
-}
-
 load_CN()
 {
     resetprop "ro.product.model" "Redmi K40"
@@ -71,35 +54,12 @@ load_CN()
     setdevicespecs "alioth"
 }
 
-load_global()
-{
-    resetprop "ro.product.model" "POCO F3"
-    resetprop "ro.product.odm.model" "POCO F3"
-    resetprop "ro.product.system.model" "POCO F3"
-    resetprop "ro.product.vendor.model" "POCO F3"
-    resetprop "ro.product.system_ext.model" "POCO F3"
-    resetprop "ro.product.product.model" "POCO F3"
-    resetprop "ro.product.brand" "POCO"
-    resetprop "ro.product.odm.brand" "POCO"
-    resetprop "ro.product.system.brand" "POCO"
-    resetprop "ro.product.system_ext.brand" "POCO"
-    resetprop "ro.product.product.brand" "POCO"
-    resetprop "ro.product.vendor.brand" "POCO"
-    setdevicespecs "alioth"
-}
-
 variant=$(getprop ro.boot.hwc)
 echo $variant
 
 case $variant in
-    "INDIA")
-        load_INDIA;
-        ;;
-    "CN")
-        load_CN;
-        ;;
     *)
-        load_global;
+        load_CN;
         ;;
 esac
 
