@@ -20,7 +20,7 @@
 
 #set -o xtrace
 FDEVICE="alioth"
-THIS_DEVICE=${BASH_ARGV[2]}
+THIS_DEVICE="alioth"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w \"$FDEVICE\")
